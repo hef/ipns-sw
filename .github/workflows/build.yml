@@ -22,8 +22,8 @@ jobs:
       pull-requests: write
       packages: write
     outputs:
-      new-release-published: ${{ steps.semantic.outputs.new-release-published }}
-      new-release-version: ${{ steps.semantic.outputs.new-release-version }}
+      new-release-published: ${{ steps.version.outputs.new-release-published }}
+      new-release-version: ${{ steps.version.outputs.new-release-version }}
 
     steps:
       - name: Checkout
@@ -50,6 +50,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+
+      - name: Get version from package.json
+        if: github.event_name != 'pull_request'
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "new-release-version=$VERSION" >> $GITHUB_OUTPUT
+          if git describe --exact-match --tags HEAD 2>/dev/null; then
+            echo "new-release-published=true" >> $GITHUB_OUTPUT
+          else
+            echo "new-release-published=false" >> $GITHUB_OUTPUT
+          fi
 
   build:
     runs-on: ubuntu-latest
