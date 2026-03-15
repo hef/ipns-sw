@@ -1,11 +1,11 @@
-FROM docker.io/library/node:alpine AS builder
+FROM --platform=$BUILDPLATFORM docker.io/library/node:22-alpine AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY sw.src.js ./
 RUN npm run build
 
-FROM docker.io/library/nginx:alpine
+FROM docker.io/library/nginx:1.27-alpine
 LABEL org.opencontainers.image.title="ipns-sw"
 LABEL org.opencontainers.image.description="IPNS service worker proxy"
 LABEL org.opencontainers.image.vendor="hef"
