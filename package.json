@@ -1,6 +1,6 @@
 {
   "name": "ipns-sw",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "IPNS service worker proxy",
   "type": "module",
   "main": "index.js",
