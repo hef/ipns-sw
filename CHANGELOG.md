@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/hef/ipns-sw/compare/v1.0.3...v1.0.4) (2026-03-15)
+
+
+### Bug Fixes
+
+* fix label locations ([5e15de4](https://github.com/hef/ipns-sw/commit/5e15de4c12f37c39874ecb179186716300150afa))
+
 ## [1.0.3](https://github.com/hef/ipns-sw/compare/v1.0.2...v1.0.3) (2026-03-15)
 
 
