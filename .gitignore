@@ -1,7 +1,4 @@
 node_modules/
 sw.js
 sw.js.map
-*.log
 .idea/
-meta.json
-package-lock.json
