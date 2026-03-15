@@ -16,5 +16,5 @@
   "dependencyDashboard": true,
   "labels": ["dependencies"],
   "assigneesFromCodeOwners": true,
-  "assignAutomerge": true
+  "assignAutomerge": true,
 }
