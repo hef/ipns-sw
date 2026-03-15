@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/hef/ipns-sw/compare/v1.0.4...v1.1.0) (2026-03-15)
+
+
+### Features
+
+* adding arm64 builds ([5f6a486](https://github.com/hef/ipns-sw/commit/5f6a4865fedd9058ab31bc5605934e432388a6fb))
+
 ## [1.0.4](https://github.com/hef/ipns-sw/compare/v1.0.3...v1.0.4) (2026-03-15)
 
 
