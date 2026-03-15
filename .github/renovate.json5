@@ -13,9 +13,8 @@
       "automerge": true
     }
   ],
-  "schedule": ["before 6am on saturday"],
-  "timezone": "America/Chicago",
   "dependencyDashboard": true,
   "labels": ["dependencies"],
-  "assignees": ["@hef"]
+  "assigneesFromCodeOwners": true,
+  "assignAutomerge": true
 }
