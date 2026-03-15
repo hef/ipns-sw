@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/hef/ipns-sw/compare/v1.1.0...v1.1.1) (2026-03-15)
+
+
+### Bug Fixes
+
+* using /sw.js instead of sw.js so we get the right content ([6aed2ac](https://github.com/hef/ipns-sw/commit/6aed2ac10e67cd34db23a72f09d7cd33ce349f21))
+
 # [1.1.0](https://github.com/hef/ipns-sw/compare/v1.0.4...v1.1.0) (2026-03-15)
 
 
