@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/hef/ipns-sw/compare/v1.0.2...v1.0.3) (2026-03-15)
+
+
+### Bug Fixes
+
+* fix reading version info during release builds ([77c3182](https://github.com/hef/ipns-sw/commit/77c3182f0e4b3fb6d1ad4494b1d773bfb0f88654))
+
 ## [1.0.2](https://github.com/hef/ipns-sw/compare/v1.0.1...v1.0.2) (2026-03-15)
 
 
