@@ -1,0 +1,7 @@
+node_modules/
+*.bundle.js
+*.bundle.js.map
+*.log
+.idea/
+meta.json
+package-lock.json

@@ -1,0 +1,19 @@
+{
+  "name": "webworker",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild sw.js --bundle --format=esm --minify --sourcemap --outfile=sw.bundle.js",
+    "analyze": "esbuild sw.js --bundle --format=esm --metafile=meta.json --outfile=sw.bundle.js && npx esbuild-visualizer --metadata meta.json --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "esbuild": "^0.27.4"
+  },
+  "dependencies": {
+    "@helia/verified-fetch": "^7.0.4"
+  }
+}
