@@ -3,7 +3,6 @@ name: Build and Push Container
 on:
   push:
     branches:
-      - master
       - main
     tags:
       - 'v*'
@@ -83,13 +82,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=sha,prefix={{branch}}-
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=${{ needs.release.outputs.new-release-version }},enable=${{ needs.release.outputs.new-release-published == 'true' }}
+            type=raw,value=latest,enable=${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
           labels: |
             org.opencontainers.image.title=ipns-sw
             org.opencontainers.image.description=IPNS service worker proxy
