@@ -5,8 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild sw.js --bundle --format=esm --minify --sourcemap --outfile=sw.bundle.js",
-    "analyze": "esbuild sw.js --bundle --format=esm --metafile=meta.json --outfile=sw.bundle.js && npx esbuild-visualizer --metadata meta.json --open",
+    "build": "esbuild sw.src.js --bundle --format=esm --minify --sourcemap --outfile=sw.js",
+    "analyze": "esbuild sw.src.js --bundle --format=esm --metafile=meta.json --outfile=sw.js && npx esbuild-visualizer --metadata meta.json --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,
