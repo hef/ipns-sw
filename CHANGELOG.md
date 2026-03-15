@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/hef/ipns-sw/compare/v1.1.1...v1.2.0) (2026-03-15)
+
+
+### Features
+
+* precompressing served files ([ef0b6d8](https://github.com/hef/ipns-sw/commit/ef0b6d83a1148e1022294a5e3c1d749b2ba687cb))
+
 ## [1.1.1](https://github.com/hef/ipns-sw/compare/v1.1.0...v1.1.1) (2026-03-15)
 
 
