@@ -5,12 +5,10 @@ RUN npm ci
 COPY sw.src.js ./
 RUN npm run build
 COPY index.html ./
-RUN apk add --no-cache gzip brotli && \
-    gzip -9 -k sw.js index.html && \
-    brotli -9 -k sw.js index.html
+RUN apk add --no-cache gzip && \
+    gzip -9 -k sw.js index.html
 
 FROM docker.io/library/nginx:1.27-alpine
-RUN apk add --no-cache nginx-mod-http-brotli
 LABEL org.opencontainers.image.title="ipns-sw"
 LABEL org.opencontainers.image.description="IPNS service worker proxy"
 LABEL org.opencontainers.image.vendor="hef"
