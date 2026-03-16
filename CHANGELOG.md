@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/hef/ipns-sw/compare/v1.2.0...v1.2.1) (2026-03-16)
+
+
+### Bug Fixes
+
+* remove brotli support ([b67ff62](https://github.com/hef/ipns-sw/commit/b67ff627596da98aaf7226e10acd43036a3d5029))
+
 # [1.2.0](https://github.com/hef/ipns-sw/compare/v1.1.1...v1.2.0) (2026-03-15)
 
 
