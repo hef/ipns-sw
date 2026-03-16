@@ -8,7 +8,7 @@ COPY index.html ./
 RUN apk add --no-cache gzip && \
     gzip -9 -k sw.js index.html
 
-FROM docker.io/library/nginx:1.27-alpine
+FROM docker.io/library/nginx:1.29-alpine
 LABEL org.opencontainers.image.title="ipns-sw"
 LABEL org.opencontainers.image.description="IPNS service worker proxy"
 LABEL org.opencontainers.image.vendor="hef"
