@@ -17,6 +17,8 @@
     "semantic-release": "^25.0.3"
   },
   "dependencies": {
+    "@helia/http": "^3.0.22",
+    "@helia/routers": "^5.0.3",
     "@helia/verified-fetch": "^7.0.4"
   }
 }
