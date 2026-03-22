@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/hef/ipns-sw/compare/v1.2.1...v1.3.0) (2026-03-22)
+
+
+### Bug Fixes
+
+* **app:** add more gateways and enable bootstrapping ([a2f106b](https://github.com/hef/ipns-sw/commit/a2f106b8b835cfa7be67e1a1a06e5de6f268001c))
+
+
+### Features
+
+* **nginx:** extending proxy life of hosting stuff ([a1e5bf2](https://github.com/hef/ipns-sw/commit/a1e5bf28835815682260b14e66fd211a281a9c6b))
+
 ## [1.2.1](https://github.com/hef/ipns-sw/compare/v1.2.0...v1.2.1) (2026-03-16)
 
 
