@@ -15,3 +15,5 @@ LABEL org.opencontainers.image.vendor="hef"
 COPY --from=builder /app/sw.js* /usr/share/nginx/html/
 COPY --from=builder /app/index.html* /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+    CMD wget -qO- http://localhost/sw.js > /dev/null || exit 1
