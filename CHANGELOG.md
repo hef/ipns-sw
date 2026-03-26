@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/hef/ipns-sw/compare/v1.4.0...v1.5.0) (2026-03-26)
+
+
+### Features
+
+* **p2p:** persisting more p2p stuff ([aaf7c0a](https://github.com/hef/ipns-sw/commit/aaf7c0a2b771f07439c88d57e64acbfcf9f27172))
+
 # [1.4.0](https://github.com/hef/ipns-sw/compare/v1.3.0...v1.4.0) (2026-03-26)
 
 
