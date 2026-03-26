@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/hef/ipns-sw/compare/v1.3.0...v1.4.0) (2026-03-26)
+
+
+### Features
+
+* **p2p:** enabling p2p features of libp2p ([6de562d](https://github.com/hef/ipns-sw/commit/6de562ddbab4d3958775c4cdc26b8bdb2e52a150))
+
 # [1.3.0](https://github.com/hef/ipns-sw/compare/v1.2.1...v1.3.0) (2026-03-22)
 
 
