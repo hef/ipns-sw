@@ -1,3 +1,4 @@
+import { loadOrCreateSelfKey } from '@libp2p/config';
 import { bitswap, trustlessGateway } from '@helia/block-brokers';
 import { httpGatewayRouting, libp2pRouting } from '@helia/routers';
 import { createHelia, libp2pDefaults } from 'helia';
@@ -22,11 +23,20 @@ self.addEventListener('fetch', (() => {
         if (!vFetchPromise) {
             vFetchPromise = (async () => {
                 const blockstore = new IDBBlockstore('helia/blocks');
+                const libp2pDatastore = new IDBDatastore('helia/libp2p');
                 const datastore = new IDBDatastore('helia/data');
-                await blockstore.open();
-                await datastore.open();
+                await Promise.all([
+                    blockstore.open(),
+                    libp2pDatastore.open(),
+                    datastore.open(),
+                ]);
 
-                const libp2p = await createLibp2p(libp2pDefaults());
+                const privateKey = await loadOrCreateSelfKey(libp2pDatastore);
+                const libp2p = await createLibp2p({
+                    ...libp2pDefaults(),
+                    datastore: libp2pDatastore,
+                    privateKey,
+                });
 
                 const helia = await createHelia({
                     blockstore,
